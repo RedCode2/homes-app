@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { HousingLocation } from './housing-location';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HousingService {
-  readonly baseUrl: string = 'https://angular.dev/assets/images/tutorials/common';
+  readonly baseUrl: string =
+    'https://angular.dev/assets/images/tutorials/common';
 
   housingLocationList: HousingLocation[] = [
     {
@@ -115,8 +116,7 @@ export class HousingService {
   }
   getHousingLocationById(id: number): HousingLocation | undefined {
     return this.housingLocationList.find(
-      (housingLocation) => 
-        housingLocation.id === id
-    )
+      (housingLocation) => housingLocation.id === id
+    );
   }
 }
