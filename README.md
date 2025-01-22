@@ -1,59 +1,55 @@
 # HomesApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+The root of this project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
-## Development server
+## Install npm
 
-To start a local development server, run:
+- Before you start a local development server, you first need to install [nodejs](https://nodejs.org/en).
+- To test if you properly installed npm, run the following command in your terminal:
+  ```bash
+  npm --version
+  ```
+- Correct any errors before you move to the next step.
 
-```bash
-ng serve
-```
+## Install the Angular CLI via npm
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- In order to install the angular CLI, run the following command in your terminal:
+  ```bash
+  npm install -g @angular/cli
+  ```
+- Test if the Angular CLI is correctly installed on your system:
+  ```bash
+  ng version
+  ```
+- If you encounter any issues while installing the Angular CLI, view the [official installation procedure](https://angular.dev/tools/cli/setup-local) by Angular.
 
-## Code scaffolding
+## Install JSON Server via npm
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- In order to install `json-server`, run the following command in your terminal:
+  ```bash
+  npm install -g json-server
+  ```
+- Test if `json-server` is correctly installed on your system:
+  ```bash
+  json-server -- version
+  ```
+- If you encounter any issues while installing JSON Server package, view [json-server - npm](https://www.npmjs.com/package/json-server).
 
-```bash
-ng generate component component-name
-```
+## Run the JSON Server and fetch house details data
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Clone this repository, navigate to the folder where you saved this repository, and open the repository folder
+- Now, in the root directory of the project, run:
+  ```bash
+  json-server --watch "src/data/houseDetails.json"
+  ```
 
-```bash
-ng generate --help
-```
+## Set up a local development environment on your system
 
-## Building
+- Clone this repository, navigate to the folder where you saved this repository, and open the repository folder
+- Now, open a different terminal without closing the previous one and in the root directory of the project, run:
+  ```bash
+  ng serve
+  ```
+- Go to [http://localhost:4200](http://localhost:4200) and view the project.
 
-To build the project run:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
