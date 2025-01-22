@@ -9,7 +9,6 @@ import {
 
 import { HousingLocation } from '../housing-location';
 import { HousingService } from '../housing.service';
-import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-details',
@@ -32,8 +31,10 @@ export class DetailsComponent {
   });
 
   constructor() {
-    const housingLocationId: number = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+    const housingLocationId: number = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then((housingLocation: HousingLocation | undefined) => {
+      this.housingLocation = housingLocation;
+    })
   }
 
   submitApplication() {
