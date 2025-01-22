@@ -21,6 +21,7 @@ button {
   background: #605dc8;
   color: white;
   border-radius: 0px;
+  cursor: pointer;
 }
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
